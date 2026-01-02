@@ -10,10 +10,11 @@
         <p class="card-text">Auhtor Name: {{ data.author.name }}</p>
          <p class="card-text">
             {% for cat in data.category.all %}
-                <button class="btn btn-warning m-2" disabled>{{ cat.name }}</button>
+                <button class="btn btn-primary btn-sm m-2" disabled>{{ cat.name }}</button>
             {% endfor %}
         </p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="{% url 'edit_post' data.id %}" class="btn btn-warning ">Edit</a>
+        <a href="#" class="btn btn-danger">Delete</a>
       </div>
     </div>
   </div>
